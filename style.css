@@ -1,0 +1,316 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:wght@700&display=swap');
+* {
+    box-sizing: border-box;
+}
+html {
+
+}
+
+body {
+    /*margin: 0;
+    
+    background-image: url(img/grid.jpg);
+    background-size:cover;
+    font-style: normal;*/
+
+    grid-template-rows:
+    font-family: 'Space Mono', monospace;
+    font-weight: 100;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: hsl(0 0% 98%);
+    background: hsl(0 0% 2%);
+}
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        --size: 100px;
+        background: linear-gradient( hsl(0 0% 12%) 0 2px, transparent 2px var(--size) ) 50% 50% / var(--size) var(--size), linear-gradient( 90deg, hsl(0 0% 12%) 0 2px, transparent 2px var(--size) ) 50% 50% / var(--size) var(--size);
+        mask: linear-gradient(25deg, white, transparent);
+        z-index: -1;
+    }
+.header {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(253, 253, 253, 0.0) 0%, rgb(4, 4, 4) 100%);
+    margin: 0px;
+    padding: 0px;
+    backdrop-filter: blur(1.1px);
+}
+    .header h1 {
+        margin-top: 100px;
+        margin-bottom: 0px;
+        font-size: 200px;
+        margin-left: 100px;
+        font-family: 'Montserrat', sans-serif;
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(158,158,158,0.4150035014005602) 89%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+.typewriter {
+    width: 50%;
+    margin-top: 5px;
+    align-content: center;
+}
+
+    .typewriter h1 {
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(158,158,158,0.4150035014005602) 89%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Lora', serif;
+        margin-top: 5px;
+        font-size: 80px;
+        margin-left: 100px;
+    }
+
+.block1 {
+    width: 20%;
+    height: 500px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.39);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+    border: 1px solid rgba(255, 255, 255, 0.61);
+    margin-left:192px;
+    margin-top:400px;
+    text-align:center;
+}
+
+    .block1 img {
+        width: 300px;
+        height: 300px;
+        border-radius: 300px;
+        margin: 50px 20px 0 20px;
+        filter: grayscale(80%);
+    }
+
+        .block1 img:hover {
+            filter: grayscale(10%);
+            animation-delay: 2s;
+        }
+    .block1 h3 {
+        font-family: 'Lora', serif;
+    }
+    .block1 h1 {
+        font-family: 'Montserrat', sans-serif;
+
+    }
+    /* DEMO-SPECIFIC STYLES 
+    .typewriter h1 {
+        color: #fff;
+        font-family: monospace;
+        overflow: hidden;  Ensures the content is not revealed until the animation 
+        border-right: .15em solid orange;  The typwriter cursor 
+        white-space: nowrap;  Keeps the content on a single line 
+        margin: 0 auto;  Gives that scrolling effect as the typing happens 
+        letter-spacing: .15em; /* Adjust as needed 
+        animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+        margin-top: 50px;
+        font-size: 50px;
+        margin-left: 100px;
+        
+        font-family: 'Space Mono', monospace;
+    }
+
+ The typing effect 
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+ The typewriter cursor effect 
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+    */
+    /*#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    
+}
+
+
+h1 {
+    padding: 0px;
+    margin: 0px;
+    font-style: italic;
+}
+h2{
+    margin-bottom:2px;
+   font-size:30px;
+}
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    margin-top: 2px;
+    text-decoration:underline;
+}
+
+
+.card img {
+    width: 25%;
+    height: 100px;
+    margin-right: 15px;
+    box-sizing: border-box;
+}
+.card content {
+    position: static;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    margin-left: 5px;
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(0deg, rgb(3, 3, 3) 50%, rgb(248, 248, 248, 0.2) 100%);
+    display: flex;
+}
+/*.row {
+    background: linear-gradient(0deg, rgb(3, 3, 3) 50%, rgb(248, 248, 248, 0.2) 100%);
+    justify-content: center;
+    
+    text-align: center;
+}
+    
+.row {
+  
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.card {
+    background: rgba( 55, 55, 55, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 55, 55, 55, 0.35 );
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
+    border-radius: 16px;
+    
+    transition: 0.3s;
+    width:30%;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    border: none;
+    box-sizing: border-box;
+}
+
+    .card:hover {
+        background: rgba( 6, 6, 6, 0.65 );
+        box-shadow: 0 8px 32px 0 rgba( 55, 55, 55, 0.38 );
+        backdrop-filter: blur( 17px );
+
+        -webkit-backdrop-filter: blur( 17px );
+        border-radius: 16px;
+        width: 31%;
+        height: 320px;
+    }
+
+    .card h3 {
+        margin: 0;
+    }
+
+    .card p {
+        margin: 0;
+    }
+
+
+@media screen and (max-width: 490px) {
+    p {
+        font-size: 7.5px;
+    }
+
+    h3 {
+        font-size: 10px;
+    }
+
+    .card {
+        width: 30%;
+    }
+
+        .card img {
+            width: 45px;
+            height: 45px;
+        }
+
+    .row {
+        margin-left: 90px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    p{
+        font-size:7.5px;
+    }
+    h3 {
+        font-size: 10px;
+    }
+    .card{
+        width:25%;
+    }
+    .card img {
+            width: 45px;
+            height: 45px;
+    }
+    .row {
+       
+        margin-left: 130px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    p {
+        font-size: 15px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .card {
+        width: 65%;
+    }
+
+        .card img {
+            width: 70px;
+            height: 70px;
+        }
+
+    .row {
+        margin-left: 170px;
+    }
+}
+
+*/
+
+
